@@ -82,14 +82,14 @@ export default function AppIndex() {
           }}
           className="inline-block w-full max-w-md pt-8 overflow-hidden text-center align-middle transition-all bg-white shadow-xl rounded-lg"
         >
-          <h2 className="font-cal text-2xl mb-6">Create a New Site</h2>
+          <h2 className="font-cal text-2xl mb-6">Create a New Stone</h2>
           <div className="grid gap-y-5 w-5/6 mx-auto">
             <div className="border border-gray-700 rounded-lg flex flex-start items-center">
               <span className="pl-5 pr-1">📌</span>
               <input
                 className="w-full px-5 py-3 text-gray-700 bg-white border-none focus:outline-none focus:ring-0 rounded-none rounded-r-lg placeholder-gray-400"
                 name="name"
-                placeholder="Site Name"
+                placeholder="Stone Name"
                 ref={siteNameRef}
                 type="text"
               />
@@ -100,18 +100,17 @@ export default function AppIndex() {
                 className="w-full px-5 py-3 text-gray-700 bg-white border-none focus:outline-none focus:ring-0 rounded-none rounded-l-lg placeholder-gray-400"
                 name="subdomain"
                 onInput={() => setSubdomain(siteSubdomainRef.current!.value)}
-                placeholder="Subdomain"
+                placeholder="URL"
                 ref={siteSubdomainRef}
                 type="text"
               />
               <span className="px-5 bg-gray-100 h-full flex items-center rounded-r-lg border-l border-gray-600">
-                .vercel.pub
+                .sleeping.place
               </span>
             </div>
             {error && (
               <p className="px-5 text-left text-red-500">
-                <b>{error}</b> is not available. Please choose another
-                subdomain.
+                <b>{error}</b> is not available. Please choose another url.
               </p>
             )}
             <div className="border border-gray-700 rounded-lg flex flex-start items-top">
@@ -147,7 +146,7 @@ export default function AppIndex() {
                   : "bg-white text-gray-600 hover:text-black"
               } w-full px-5 py-5 text-sm border-t border-l border-gray-300 rounded-br focus:outline-none focus:ring-0 transition-all ease-in-out duration-150`}
             >
-              {creatingSite ? <LoadingDots /> : "CREATE SITE"}
+              {creatingSite ? <LoadingDots /> : "CREATE STONE"}
             </button>
           </div>
         </form>
