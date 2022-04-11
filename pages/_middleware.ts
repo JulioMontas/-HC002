@@ -18,8 +18,9 @@ export default function middleware(req: NextRequest) {
     });
 
   // Only for demo purposes – remove this if you want to use your root domain as the landing page
+
   if (hostname === "helloco.de" || hostname === "platforms.vercel.app") {
-    return NextResponse.redirect("https://demo.helloco.de");
+    return NextResponse.redirect("https://app.helloco.de");
   }
 
   const currentHost =
