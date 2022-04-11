@@ -9,13 +9,9 @@ export default function Home() {
         <title>Platforms on Vercel</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      
       <div className="m-auto w-48 text-white">
-        <h1>Homepage |
-          <Link href={`https://app.helloco.de/`}>
-            App
-          </Link>
-        </h1>
+        <h1>Homepage | Loading...</h1>
       </div>
     </div>
   );
