@@ -35,7 +35,7 @@ export default function AppIndex() {
         if (available) {
           setError(null);
         } else {
-          setError(`${debouncedSubdomain}.vercel.pub`);
+          setError(`${debouncedSubdomain}.sleeping.place`);
         }
       }
     }
@@ -190,12 +190,12 @@ export default function AppIndex() {
                         </p>
                         <a
                           className="font-cal px-3 py-1 tracking-wide rounded bg-gray-200 text-gray-600 absolute bottom-5 left-10 whitespace-nowrap"
-                          href={`https://${site.subdomain}.vercel.pub`}
+                          href={`https://${site.subdomain}.sleeping.place`}
                           onClick={(e) => e.stopPropagation()}
                           rel="noreferrer"
                           target="_blank"
                         >
-                          {site.subdomain}.vercel.pub ↗
+                          {site.subdomain}.sleeping.place ↗
                         </a>
                       </div>
                     </div>
