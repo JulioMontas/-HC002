@@ -201,14 +201,14 @@ export default function SiteSettings() {
               <input
                 className="w-full px-5 py-3 font-cal text-gray-700 bg-white border-none focus:outline-none focus:ring-0 rounded-none placeholder-gray-400"
                 name="name"
-                onInput={(e) =>
-                  setData((data) => ({
-                    ...data,
-                    name: e.currentTarget.value }))
-                }
                 placeholder="Untitled Site"
                 type="text"
-                value={data.name ?? "Unknown Name"}
+                onInput={(e: ChangeEvent<HTMLInputElement>) =>
+                  setData((data) => ({
+                    ...data,
+                    name: e.target.value }))
+                }
+                value={data?.name ?? "Unknown Name"}
               />
             </div>
           </div>
@@ -218,14 +218,13 @@ export default function SiteSettings() {
               <textarea
                 className="w-full px-5 py-3 font-cal text-gray-700 bg-white border-none focus:outline-none focus:ring-0 rounded-none placeholder-gray-400"
                 name="description"
-                onInput={(e) =>
-                  setData((data) => ({
-                    ...data,
-                    description: e.currentTarget.value,
-                  }))
-                }
                 placeholder="Lorem ipsum forem dimsum"
                 rows={3}
+                onInput={(e: ChangeEvent<HTMLInputElement>) =>
+                  setData((data) => ({
+                    ...data,
+                    description: e.target.value }))
+                }
                 value={data?.description ?? "Unknown Description"}
               />
             </div>
@@ -236,15 +235,14 @@ export default function SiteSettings() {
               <input
                 className="w-1/2 px-5 py-3 font-cal text-gray-700 bg-white border-none focus:outline-none focus:ring-0 rounded-none rounded-l-lg placeholder-gray-400"
                 name="subdomain"
-                onInput={(e) =>
-                  setData((data) => ({
-                    ...data,
-                    subdomain: e.currentTarget.value,
-                  }))
-                }
                 placeholder="subdomain"
                 type="text"
-                value={data.subdomain ?? "Unknown Subdomain"}
+                onInput={(e: ChangeEvent<HTMLInputElement>) =>
+                  setData((data) => ({
+                    ...data,
+                    subdomain: e.target.value }))
+                }
+                value={data?.subdomain ?? "Unknown Subdomain"}
               />
               <div className="w-1/2 h-12 flex justify-center items-center font-cal rounded-r-lg border-l border-gray-600 bg-gray-100">
                 sleeping.place
