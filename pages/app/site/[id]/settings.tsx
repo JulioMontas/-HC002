@@ -176,7 +176,7 @@ export default function SiteSettings() {
         customDomain: customDomain,
       }));
 
-      event.currentTarget.customDomain.value = "";
+      event.currentTarget.customDomain.value = " ";
     } catch (error) {
       setError(error);
     } finally {
@@ -202,7 +202,9 @@ export default function SiteSettings() {
                 className="w-full px-5 py-3 font-cal text-gray-700 bg-white border-none focus:outline-none focus:ring-0 rounded-none placeholder-gray-400"
                 name="name"
                 onInput={(e) =>
-                  setData((data) => ({ ...data, name: e.currentTarget.value }))
+                  setData((data) => ({
+                    ...data,
+                    name: e.currentTarget.value }))
                 }
                 placeholder="Untitled Site"
                 type="text"
@@ -409,6 +411,8 @@ export default function SiteSettings() {
           </div>
         </div>
       </div>
+
+
       <Modal showModal={showDeleteModal} setShowModal={setShowDeleteModal}>
         <form
           onSubmit={async (event) => {
